@@ -1,0 +1,67 @@
+header {
+    top:0px;
+    left:0px;
+    height:11rem;
+    width:100%;
+    padding: 3rem 5rem;
+    background: var(--base);
+    position:fixed;
+    transition: all .5s;
+    box-shadow: var(--base_shadow)
+}
+
+header.sticky {
+    padding: 0 5rem;
+    position:fixed;
+}
+
+header .logo {
+    position:relative;
+    font-weight:700;
+    font-size:2rem;
+    color: var(--accent_dark);
+    text-decorartion:none;
+    text-transform:uppercase;
+    letter-spacing:.2rem;
+}
+
+header ul {
+    position:relative;
+}
+
+header ul li {
+    position:relative;
+    list-style:none;
+}
+
+header ul li .link {
+    position:relative;
+    margin: 0 .5rem;
+    text-decoration:none;
+    color: var(--base_dark);
+    letter-spacing: 0.1rem;
+    font-size:1rem;
+    font-weight:500;
+    transition: all .2s ease-in-out;
+    border-radius: 10px;
+}
+
+header ul li .link:hover {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size:1.1rem;
+    color: var(--accent_dark);
+}
+
+header ul li .link:active {
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    color: var(--secondary-color);
+}
+
+.user {
+    outline: 10px solid var(--base);
+}
+
+.mainScreen {
+    transition: .25s;
+}

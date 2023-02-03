@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dropdownInput::before {
+    content:'';
+    position:absolute;
+    right: 1.25rem;
+    width:8px;
+    height:8px;
+    border-bottom: 2px solid var(--base_dark);
+    border-right: 2px solid var(--base_dark);
+    transition: .5s;
+    pointer-events:none;
+    z-index:1000;
+}
+
+.dropdownInput.open::before {
+    top: 1.3rem;
+    transform: rotate(-135deg);
+}
+
+.dropdownInput.closed::before {
+    top: 1.2rem;
+    transform: rotate(45deg);
+}
+
+.dropdownInput input {
+    background: #fff;
+    cursor: pointer;
+    border: 2px solid var(--grey3);
+    outline: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border-radius: 100px;
+    transition: all .3s ease-in;
+}
+
+.dropdownInput input:hover {
+    padding-left:30px;
+    padding-right: 30px;
+}
+
+.dropdownInput input:focus {
+    border: 2px solid var(--primary-color);
+}
+
+.dropdownInput .options {
+    background: #fff;
+    box-shadow: 0 30px 30px rgba(0,0,0,0.05);
+    border: 2px solid var(--grey3);
+    border-radius: 25px;
+}
+
+/* width */
+.dropdownInput .options::-webkit-scrollbar {
+    width: 4px;
+}
+  
+  /* Track */
+.dropdownInput .options::-webkit-scrollbar-track {
+    margin-top:20px;
+    margin-bottom:20px;
+    background: transparent;
+}
+
+/* Handle */
+.dropdownInput .options::-webkit-scrollbar-thumb {
+    border-radius:5px;
+    background: var(--grey2);
+}
+
+/* Handle on hover */
+.dropdownInput .options::-webkit-scrollbar-thumb:hover {
+    background: var(--grey1);
+}
+
+/* Handle on active */
+.dropdownInput .options::-webkit-scrollbar-thumb:active {
+    background: var(--secondary-color);
+}
+
+
+.dropdownInput .options div {
+    color: var(--grey1);
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.dropdownInput .options div:hover {
+    background: var(--secondary-color);
+    font-weight: 500;
+    transition: .2s;
+}
+
+.dropdownInput .options div:active {
+    background: var(--base_dark);
+    color: var(--secondary-color);
+    transition: .2s;
+}

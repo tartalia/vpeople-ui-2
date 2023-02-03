@@ -1,0 +1,40 @@
+.cardHeader {
+    background: #d9d9d9;
+    cursor: pointer;
+}
+
+.dropdownCard {
+    transition: .5s;
+}
+
+.dropdownCard.open {
+    height:fit-content;
+   
+}
+
+.dropdownCard.closed {
+    height:2.5rem;
+}
+
+.dropdownCard::before {
+    content:'';
+    position:absolute;
+    right: 8rem;
+    width:8px;
+    height:8px;
+    border-bottom: 2px solid var(--base_dark);
+    border-right: 2px solid var(--base_dark);
+    transition: .5s;
+    pointer-events:none;
+    z-index:1000;
+}
+
+.dropdownCard.open::before {
+    margin-top:17px;
+    transform: rotate(-135deg);
+}
+
+.dropdownCard.closed::before {
+    margin-top:15px;
+    transform: rotate(45deg);
+}

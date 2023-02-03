@@ -1,0 +1,16 @@
+.text-input {
+    cursor:text;
+    margin:auto;
+    padding: 11px;
+    padding-left: 15px;
+    padding-right: 3rem;
+    border: 0;
+    border-radius: 20px;
+    box-shadow:0px 1px 9px rgba(0, 0, 0, 0.21);
+    width:22rem;
+}
+
+.text-input:focus{
+    outline-offset: 2px;
+    outline-color: var(--secondary-color);
+}

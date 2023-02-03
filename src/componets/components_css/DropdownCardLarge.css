@@ -1,0 +1,40 @@
+.cardHeaderLarge {
+    cursor: pointer;
+    height:9rem;
+}
+
+.dropdownCardLarge {
+    transition: .5s;
+}
+
+.dropdownCardLarge.open {
+    height:fit-content;
+   
+}
+
+.dropdownCardLarge.closed {
+    height:9rem;
+}
+
+.dropdownCardLarge::before {
+    content:'';
+    position:absolute;
+    right: 8rem;
+    width:8px;
+    height:8px;
+    border-bottom: 2px solid var(--base_dark);
+    border-right: 2px solid var(--base_dark);
+    transition: .5s;
+    pointer-events:none;
+    z-index:1000;
+}
+
+.dropdownCardLarge.open::before {
+    margin-top:4.4rem;
+    transform: rotate(-135deg);
+}
+
+.dropdownCardLarge.closed::before {
+    margin-top:4.3rem;
+    transform: rotate(45deg);
+}
